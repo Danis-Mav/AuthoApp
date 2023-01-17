@@ -9,6 +9,7 @@
       Title="AuthoPage">
 
     <Grid>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="3*"/>
@@ -33,6 +34,7 @@
             <Button Margin="20" Width="200" Content="Registration" Click="RegButton" Background="#FFC59999"/>
             <Button Margin="20" Width="200" Content="Authorithation" Click="AuthButton" Background="#FFC79999"/>
             
+
         </StackPanel>
         
     </Grid>

@@ -40,7 +40,9 @@ namespace AuthoApp.Pages
             var z = users.Where(a => a.Login == tb_Login.Text && a.Password == pb_Password.Password).FirstOrDefault();
             if (z != null)
             {
-                    NavigationService.Navigate(new MainPage(z));
+                WindowMain taskWindow = new WindowMain(z);
+                taskWindow.Show();
+
                 
             }
             else
