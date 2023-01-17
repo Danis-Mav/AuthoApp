@@ -42,8 +42,7 @@ namespace AuthoApp.Pages
             {
                 WindowMain taskWindow = new WindowMain(z);
                 taskWindow.Show();
-
-                
+                                
             }
             else
             {
