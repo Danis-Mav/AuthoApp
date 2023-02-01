@@ -36,18 +36,16 @@ namespace AuthoApp.Pages
 
         private void AuthButton(object sender, RoutedEventArgs e)
         {
-            users = new ObservableCollection<User>(DBConnection.connection.User.ToList());
-            var z = users.Where(a => a.Login == tb_Login.Text && a.Password == pb_Password.Password).FirstOrDefault();
-            if (z != null)
-            {
-                WindowMain taskWindow = new WindowMain(z);
-                taskWindow.Show();
-                                
-            }
-            else
-            {
-                MessageBox.Show("Пользователь не найден");
-            }
+            //users = new ObservableCollection<User>(DBConnection.connection.User.ToList());
+            //var z = users.Where(a => a.Login == tb_Login.Text && a.Password == pb_Password.Password).FirstOrDefault();
+            //if (z != null)
+            //{
+                NavigationService.Navigate(new MainPage(/*z*/));
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Пользователь не найден");
+            //}
         }
     }
 }

@@ -15,20 +15,17 @@ using System.Windows.Shapes;
 using AuthoApp.DB;
 using AuthoApp.Pages;
 
-
 namespace AuthoApp.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainPage.xaml
+    /// Логика взаимодействия для CostPage.xaml
     /// </summary>
-    public partial class MainPage : Page
+    public partial class CostPage : Page
     {
-
-        public MainPage(/*User user*/)
+        public CostPage()
         {
             InitializeComponent();
         }
-
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
 

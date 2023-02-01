@@ -15,25 +15,17 @@ using System.Windows.Shapes;
 using AuthoApp.DB;
 using AuthoApp.Pages;
 
-
 namespace AuthoApp.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainPage.xaml
+    /// Логика взаимодействия для OrderPage.xaml
     /// </summary>
-    public partial class MainPage : Page
+    public partial class OrderPage : Page
     {
-
-        public MainPage(/*User user*/)
+        public OrderPage()
         {
             InitializeComponent();
         }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new MainPage());
