@@ -17,7 +17,6 @@ namespace AuthoApp.DB
         public int ID { get; set; }
         public Nullable<int> IdPen { get; set; }
         public Nullable<int> IdCustomer { get; set; }
-        public Nullable<System.DateTime> DataTime { get; set; }
         public Nullable<int> Amount { get; set; }
     
         public virtual Custumer Custumer { get; set; }

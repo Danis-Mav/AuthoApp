@@ -4,18 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="eb03cf7e720b4ca8b0cc0625592d1f96" Name="Diagram1">
-        <EntityTypeShape EntityType="DelikModel.Custumer" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DelikModel.Order" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="DelikModel.Pen" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+      <Diagram DiagramId="a291bf3098a949ecb5c02ce929c46ae4" Name="Diagram1">
+        <EntityTypeShape EntityType="DelikModel.Custumer" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DelikModel.Order" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DelikModel.Pen" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="DelikModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DelikModel.TypeCustomer" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DelikModel.TypePen" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DelikModel.TypeCustomer" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DelikModel.TypePen" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DelikModel.User" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="DelikModel.FK_Custumer_TypeCustomer" ManuallyRouted="false" />
         <AssociationConnector Association="DelikModel.FK_Order_Custumer" ManuallyRouted="false" />
         <AssociationConnector Association="DelikModel.FK_Order_Pen" ManuallyRouted="false" />
         <AssociationConnector Association="DelikModel.FK_Pen_TypePen" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="DelikModel.User" Width="1.5" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

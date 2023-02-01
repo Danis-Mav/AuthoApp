@@ -17,6 +17,28 @@
             </MenuItem>
         </Menu>
         <TextBlock Margin="40,0" Text="PENS" FontSize="30"/>
-        
+        <ListView  x:Name="StudToShow" ItemsSource="{Binding pens}" Margin="5,40,5,0">
+            <ListView.View >
+                <GridView>
+                    <GridViewColumn Header="№" Width="30" DisplayMemberBinding="{Binding ID}" />
+
+                    <GridViewColumn Width="300"  Header="Тип" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock FontSize="25" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow"  Text="{Binding TypePen.Name}"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Width="300"  Header="Цена" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock FontSize="25" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow"  Text="{Binding Price}"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
     </Grid>
 </Page>

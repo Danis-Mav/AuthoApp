@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,9 +23,12 @@ namespace AuthoApp.Pages
     /// </summary>
     public partial class CostPage : Page
     {
+        public static ObservableCollection<Custumer> cost { get; set; }
         public CostPage()
         {
             InitializeComponent();
+            cost = new ObservableCollection<Custumer>(DBConnection.connection.Custumer/*.Where(a => a.IsDeleted == false)*/.ToList());
+            this.DataContext = this;
         }
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {

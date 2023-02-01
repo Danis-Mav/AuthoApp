@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AuthoApp.DB;
 using AuthoApp.Pages;
-
+using Pen = AuthoApp.DB.Pen;
 
 namespace AuthoApp.Pages
 {
@@ -23,10 +24,14 @@ namespace AuthoApp.Pages
     /// </summary>
     public partial class MainPage : Page
     {
-
+        public static ObservableCollection<Pen> pens { get; set; }
+        public static ObservableCollection<TypePen> types { get; set; }
         public MainPage(/*User user*/)
         {
             InitializeComponent();
+            pens = new ObservableCollection<Pen>(DBConnection.connection.Pen/*.Where(a => a.IsDeleted == false)*/.ToList());
+            types = new ObservableCollection<TypePen>(DBConnection.connection.TypePen/*.Where(a => a.IsDeleted == false)*/.ToList());
+            this.DataContext = this;
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)

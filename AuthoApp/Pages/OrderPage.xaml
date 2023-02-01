@@ -17,5 +17,35 @@
             </MenuItem>
         </Menu>
         <TextBlock Margin="40,0" Text="ORDERS" FontSize="30"/>
+        <ListView  x:Name="StudToShow" ItemsSource="{Binding ord}" Margin="5,40,5,0">
+            <ListView.View >
+                <GridView>
+                    <GridViewColumn Header="№" Width="30" DisplayMemberBinding="{Binding ID}" />
+                    <GridViewColumn Width="150"  Header="№ ручки" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock FontSize="25" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow"  Text="{Binding IdPen}"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Width="200"  Header="Наименование" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock FontSize="25" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow"  Text="{Binding Custumer.Name}"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Width="50"  Header="Кол-во" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock FontSize="25" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow"  Text="{Binding Amount}"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>
